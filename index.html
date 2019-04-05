@@ -3,17 +3,75 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobile Responsive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="main.js"></script>
   </head>
   <body>
-    <header></header>
+    <header class="main-header">
+    <nav class="main-nav">
+      <a href="index.html" class="title">
+        <h1>Melvin Viana</h1>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">home</a></li>
+        <li><a href="#portfolio">portfolio</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <div class="about-me">
+      <img src="images/responsive-layout-profile.png" alt="My Profile Image" class="header-image">
+      <p>Hi I'm a Front End Developer who enjoys creating beautiful websites. I recently completed a Front End Web Development degree with Team Treehouse and I'm excited to put my skills to use.</p>
+    </div>
+  </header>
     <main>
-      <section></section>
-      <section></section>
+      <section id="portfolio">
+        <div class="container">
+          <h2>PORTFOLIO</h2>
+          <div class="flex-container">
+            <img src="images/portfolio-1.jpg" alt="Marketing Page Image" class="portfolio-image-1">
+            <h3>Marketing Page</h3>
+            <p>This project shows the front page of a marketing website meant for a specific business I'm interested in.</p>
+            <img src="images/portfolio-2.jpg" alt="Search Page Image" class="portfolio-image-2">
+            <h3>Search Page</h3>
+            <p>This project searches through a specific database to find information that the user is trying to look up.</p>
+            <img src="images/portfolio-3.jpg" alt="Travel App Image" class="portfolio-image-3">
+            <h3>Travel App</h3>
+            <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
+            <img src="images/portfolio-4.jpg" alt="Map of Favorite Spots" class="portfolio-image-4">
+            <h3>Map of Favorite Spots</h3>
+            <p>This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.</p>
+            <img src="images/portfolio-5.jpg" alt="Photo Gallery" class="portfolio-image-5">
+            <h3>Photo Gallery</h3>
+            <p>This project shows picture from a recent trip to the viewer and allows them to easily navigate through photos.</p>
+            <img src="images/portfolio-6.jpg" alt="Calculator" class="portfolio-image-6">
+            <h3>Calculator</h3>
+            <p>Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <h2>CONTACT</h2>
+          <p>If you're interested in working with me or learning about what I'm working on, please feel free to contact me.</p>
+          <p class="contact-info">Phone: <b>(858)-222-332</b></p>
+          <p class="contact-info">Email: <b>mjviana057@gmail.com</b></p>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <hr>
+    <footer>
+      <div class="container">
+          <h1>Melvin Viana</h1>
+          <nav class="footer-nav">
+            <ul class="nav-links">
+              <li><a href="#">home</a></li>
+              <li><a href="#portfolio">portfolio</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+          </nav>
+          <span class="top-button"><a href="#">Back To Top</a></span>
+      </div>
+    </footer>
   </body>
 </html>
