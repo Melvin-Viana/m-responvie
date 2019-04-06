@@ -51,7 +51,6 @@ h3 {
 }
 .main-header {
   font-size: 1.3em;
-  margin-bottom: 30px;
 }
 .about-me {
   color: #747474;
@@ -83,7 +82,7 @@ h3 {
 }
 
 .portfolio-item {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .portfolio-image {
@@ -112,6 +111,14 @@ h3 {
   display: none;
   visibility: hidden;
 }
+/* Footer nav  */
+.footer-nav {
+  align-items: center;
+  display: flex;
+}
+.footer-nav .nav-links {
+  margin-left: auto;
+}
 /* =============== */
 /* Media Queries */
 
@@ -124,6 +131,7 @@ h3 {
   .main-header {
     line-height: 1.5;
     margin-right: 25px;
+    margin-bottom: 30px;
     padding-bottom: 20px;
     padding-left: 50px;
   }
@@ -166,25 +174,15 @@ h3 {
   }
 
   .portfolio-item {
-    margin-bottom: 50px;
     padding: 10px;
   }
   .portfolio-image {
     width: 100%;
   }
-
-  /* Footer nav  */
-  .footer-nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-  .footer-nav .nav-links {
-  }
 }
 
-/* Between 768px and 320px */
-@media only screen and (max-width: 769px) and (min-width: 321px) {
+/*=============Tablet=================== */
+@media only screen and (max-width: 768px) and (min-width: 321px) {
   .main-header {
     font-size: 2.25vw;
     line-height: 1.2;
@@ -232,13 +230,21 @@ h3 {
     width: 50%;
   }
   .portfolio-item {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     padding: 5px;
   }
   /* Footer */
+  .footer-nav{
+      font-size:2.5vw;
+      margin-top:25px;
+      padding-bottom:50px;
+  }
+  .nav-links a:not(:last-child){
+      margin-right:25px;
+  }
 }
 
-/* Mobile */
+/* ============Mobile==================== */
 @media only screen and (max-width: 320px) {
   .header-image {
     margin: 35px 0 20px 0;
@@ -261,14 +267,22 @@ h3 {
     padding: 10px;
   }
 
-  .container {
-    width: 90%;
+  .about-text{
+      width:90%;
+      margin:0 auto;
+      font-size:0.7em;
   }
+  .main-header{
+      padding-bottom:30px;
+  }
+
   main {
     font-size: 0.8em;
   }
+  
 
   .top-button {
+    display: block;
     visibility: visible;
   }
   .footer-nav .nav-links {
