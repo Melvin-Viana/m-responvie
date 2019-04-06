@@ -44,21 +44,26 @@ h2,
 h3 {
   color: #0c0c0c;
 }
-/* Top nav */
+
+/* Header */
 .main-nav {
   font-weight: bolder;
 }
 .main-header {
   font-size: 1.3em;
-  line-height: 1.5;
   margin-bottom: 30px;
 }
 .about-me {
   color: #747474;
 }
-.header-image {
-  width: 100%;
+
+.about-me p {
+  order: 1;
 }
+.header-image {
+  order: 2;
+}
+
 /* Portfolio */
 
 #portfolio {
@@ -104,6 +109,7 @@ h3 {
 
 /* Footer */
 .top-button {
+  display: none;
   visibility: hidden;
 }
 /* =============== */
@@ -116,6 +122,8 @@ h3 {
     padding: 20px;
   }
   .main-header {
+    line-height: 1.5;
+    margin-right: 25px;
     padding-bottom: 20px;
     padding-left: 50px;
   }
@@ -131,9 +139,8 @@ h3 {
   }
   .nav-links {
     margin-left: auto;
-    margin-right: 20px;
   }
-  .nav-links a {
+  .nav-links a:not(:last-child) {
     margin-right: 20px;
   }
   .about-me {
@@ -144,14 +151,15 @@ h3 {
     text-align: left;
   }
   .about-me p {
-    order: 1;
-  }
-  .header-image {
-    order: 2;
-    margin-left: 20px;
     margin-right: 40px;
   }
-
+  .header-image {
+    width: 100%;
+  }
+  .img-container {
+    order: 2;
+    flex-grow: 8;
+  }
   /* Porfolio  */
   .col-md-3 {
     width: 33.3333%;
@@ -169,18 +177,57 @@ h3 {
   .footer-nav {
     align-items: center;
     display: flex;
-    padding: 10px;
+    justify-content: space-between;
   }
   .footer-nav .nav-links {
-    margin-left: 0 auto;
   }
 }
 
 /* Between 768px and 320px */
 @media only screen and (max-width: 769px) and (min-width: 321px) {
   .main-header {
+    font-size: 2.25vw;
+    line-height: 1.2;
+    padding: 50px;
     text-align: center;
   }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* Nav */
+  .main-nav {
+    width: 100%;
+  }
+
+  .main-nav .nav-links a {
+    padding: 0 25px;
+  }
+  .main-nav .nav-links {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .about-me {
+    display: flex;
+  }
+
+  .about-me p {
+    line-height: 1.5;
+    padding: 0 10px;
+    text-align: left;
+  }
+  .header-image {
+    order: 2;
+  }
+  .header-image {
+    width: 40%;
+    align-self: flex-start;
+  }
+
+  /* Portfolio */
   .col-md-6 {
     width: 50%;
   }
@@ -188,10 +235,7 @@ h3 {
     margin-bottom: 50px;
     padding: 5px;
   }
-  .container {
-    width: 90%;
-    margin: 0 auto;
-  }
+  /* Footer */
 }
 
 /* Mobile */
@@ -201,6 +245,7 @@ h3 {
     width: 70%;
   }
   .main-nav {
+    display: block;
     font-size: 0.7em;
   }
   .main-nav h1 {
@@ -215,15 +260,14 @@ h3 {
     margin: 2px;
     padding: 10px;
   }
-  .about-me p {
-    font-size: 0.7em;
-  }
+
   .container {
     width: 90%;
   }
   main {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
+
   .top-button {
     visibility: visible;
   }
@@ -232,6 +276,7 @@ h3 {
     visibility: hidden;
   }
   .footer-nav {
+    align-items: center;
     display: flex;
     justify-content: space-between;
     font-size: 0.7em;
