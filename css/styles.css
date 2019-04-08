@@ -23,16 +23,18 @@ nav a {
   text-transform: uppercase;
 }
 
-a:visited {
-  color: #4a4a4a;
-}
-h1,
-a,
-h2,
-h3 {
-  color: #4a4a4a;
+a,a:visited,h1{
+  color:#4a4a4a;
 }
 
+h2
+ {
+  color: #eb4d4b;
+  text-decoration: underline;
+}
+h3{
+  color:#f0932b;
+}
 p {
   color: #747474;
   font-family:'Lato', sans-serif;
@@ -58,7 +60,7 @@ hr {
   width: 90%;
 }
 /* Header */
-/* Nav */
+  /* Nav */
 .main-nav {
   display: block;
   font-size: 0.7em;
@@ -78,7 +80,7 @@ hr {
   margin: 2px;
   padding: 10px;
 }
-/* About-Me */
+  /* About-Me */
 .about-text {
   font-size: 0.7em;
   line-height: 1.5;
@@ -132,6 +134,55 @@ hr {
 .contact-summary {
   margin: 20px 0;
 }
+
+/* Experience */
+#experience h2{
+  padding: 50px 0;
+}
+.card {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+  border-bottom: 4px solid #ccc;
+}
+.card:hover {
+  border-color: #ff7979;
+}
+
+.card h2 {
+  text-decoration: underline;
+  text-decoration-color: #eb4d4b;
+}
+.card h3,
+.card i {
+  text-align: center;
+}
+
+
+.fas {
+  color: #eb4d4b;
+  margin-bottom: 25px;
+}
+
+.fas {
+  color: #eb4d4b;
+  margin-bottom: 25px;
+}
+
+.experience {
+  list-style-type: none;
+  text-align: center;
+  padding: 25px;
+}
+
+.experience {
+  list-style-type: none;
+  text-align: center;
+  padding: 25px;
+}
+
 
 /* Footer */
 .top-button {
@@ -243,6 +294,11 @@ hr {
     width: 80%;
   }
 
+  /* Experience */
+  
+  .card{
+    width:33.333%;
+  }
   /* Contact */
   #contact h2 {
     padding: 25px;
