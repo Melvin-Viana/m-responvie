@@ -13,6 +13,34 @@ body {
   text-align: center;
 }
 
+/* General CSS */
+h2{
+  font-size:18px;
+  font-weight: 900;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:visited {
+  color:#4A4A4A;
+}
+h1,a,h2,h3{
+  color:#4A4A4A;
+}
+
+p{
+  color: #747474;
+}
+hr{
+  border-color:#dddcdc;  
+  border-style:solid;
+}
+
+
+/* Wrappers */
 .wrapper {
   background-color: rgb(241, 241, 241);
   max-width: 1024px;
@@ -25,43 +53,43 @@ body {
   margin-right: -15px;
   margin-left: -15px;
 }
-.container{
-  margin:0 auto;
-  width:90%;
+.container {
+  margin: 0 auto;
+  width: 90%;
 }
-/* NAV CSS */
-nav a {
-  color: #0c0c0c;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-a:visited {
-  color: #0c0c0c;
-}
-h2,
-h3 {
-  color: #0c0c0c;
-}
-
 /* Header */
+/* Nav */
 .main-nav {
+  display: block;
+  font-size: 0.7em;
   font-weight: bolder;
+}
+
+.main-nav h1 {
+  padding: 20px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+.nav-links a {
+  background-color: #fff;
+  margin: 2px;
+  padding: 10px;
+}
+/* About-Me */
+.about-text {
+  font-size: 0.7em;
 }
 .main-header {
   font-size: 1.3em;
-}
-.about-me {
-  color: #747474;
-}
-
-.about-me p {
-  order: 1;
+  padding-bottom: 30px;
 }
 .header-image {
-  order: 2;
+  margin: 35px 0 20px 0;
+  width: 70%;
 }
-
 /* Portfolio */
 
 #portfolio {
@@ -79,17 +107,16 @@ h3 {
   margin-top: 30px;
   margin-bottom: 15px;
 }
-
 .portfolio-item {
   margin-bottom: 30px;
 }
-
 .portfolio-image {
   width: 100%;
 }
 .portfolio-item p {
   padding: 12px;
 }
+
 /* Contact */
 #contact {
   margin: 25px 0;
@@ -102,7 +129,7 @@ h3 {
   padding: 10px;
 }
 .contact-summary {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 /* Footer */
@@ -114,63 +141,102 @@ h3 {
 .footer-nav {
   align-items: center;
   display: flex;
+  justify-content: space-between;
+  font-size: 0.7em;
+  font-weight: bolder;
+  padding: 25px 5px;
 }
 .footer-nav .nav-links {
+  display: none;
+  visibility: hidden;
   margin-left: auto;
 }
+.top-button {
+  display: block;
+  visibility: visible;
+}
+
 /* =============== */
 /* Media Queries */
 
+/* ====Desktop==== */
+@media only screen and (min-width: 1024px) {
+}
 
-/* ============Mobile==================== */
-  .header-image {
-    margin: 35px 0 20px 0;
-    width: 70%;
+/* ====Tablet==== */
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 95%;
   }
-  .main-nav {
-    display: block;
-    font-size: 0.7em;
+
+  body {
+    font-size: 1.3em;
   }
-  .main-nav h1 {
-    padding: 20px;
+  /* Nav */
+  .main-nav{
+    padding:40px 0;
   }
-  .nav-links {
-    display: flex;
-    flex-direction: column;
+  .student-name h1{
+    padding-bottom: 35px;
+  }
+  .main-nav .nav-links {
+    display: inline-block;
   }
   .nav-links a {
-    background-color: #fff;
-    margin: 2px;
-    padding: 10px;
+    background-color: transparent;
   }
-
+  .about-me {
+    display: flex;
+    padding:25px 0;
+  }
   .about-text {
-    width: 90%;
+    line-height: 1.5;
+    order: 1;
+    text-align: left;
+  }
+  .header-image {
+    align-self: flex-start;
+    order: 2;
+    margin: 0;
+    width: 41%;
+  }
+
+  /* Portfolio */
+  .col-md-6 {
+    width: 50%;
+  }
+  .portfolio-item {
+    margin-bottom: 45px;
+    padding: 5px;
+  }
+
+  .portfolio-item p{
+    font-size:15px;
     margin: 0 auto;
-    font-size: 0.7em;
-  }
-  .main-header {
-    padding-bottom: 30px;
+    padding:0;
+    width:80%;
   }
 
-  main {
-    font-size: 0.8em;
+  /* Contact */
+  #contact h2{
+    padding:25px;
   }
-
-  .top-button {
-    display: block;
-    visibility: visible;
+  .contact-summary{
+    margin:0 auto;
+    margin-bottom:40px;
+    width:75%;
+  }
+  /* Footer */
+   .footer-nav {
+    padding-bottom: 80px;
   }
   .footer-nav .nav-links {
+    display: block;
+    visibility: visible;
+    margin-left: auto;
+  }
+  .top-button {
     display: none;
     visibility: hidden;
   }
-  .footer-nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.7em;
-    font-weight: bolder;
-    padding: 25px 5px;
-  }
-
+}
